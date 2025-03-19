@@ -8,6 +8,9 @@ import Services from './Pages/Services';
 import Accessories from './Pages/Accessories';
 import NotFound from './Pages/NotFound';
 import Navbar from './Components/Navbar';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+import Footer from './Pages/Footer';
 
  const router = createBrowserRouter([
    {
@@ -16,6 +19,7 @@ import Navbar from './Components/Navbar';
        <>
          <Navbar />
          <Home />
+         <Footer />
        </>
      ),
    },
@@ -26,6 +30,7 @@ import Navbar from './Components/Navbar';
        <>
          <Navbar />
          <AboutUs />
+         <Footer />
        </>
      ),
    },
@@ -36,6 +41,7 @@ import Navbar from './Components/Navbar';
        <>
          <Navbar />
          <ContactUs />
+         <Footer />
        </>
      ),
    },
@@ -46,6 +52,7 @@ import Navbar from './Components/Navbar';
        <>
          <Navbar />
          <Services />
+         <Footer />
        </>
      ),
    },
@@ -56,8 +63,21 @@ import Navbar from './Components/Navbar';
        <>
          <Navbar />
          <Accessories />
+         <Footer />
        </>
      ),
+   },
+   {
+     path: "/login",
+     element: (
+       <>
+         <Login />
+       </>
+     ),
+   },
+   {
+     path: "/signup",
+     element: <>{<Signup />}</>,
    },
 
    {
