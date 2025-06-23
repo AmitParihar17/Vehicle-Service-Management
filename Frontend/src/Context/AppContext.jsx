@@ -3,6 +3,7 @@ import axiosInstance from "../../axiosInstance";
 import { baseURL } from "../../config";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 
 
@@ -57,7 +58,6 @@ export  const AppProvider = ({children})=>{
 
   useEffect(() => {
     fetchProducts();
-    fetchOrders();
   }, []);
 
   const [addresses, setAddresses] = useState([]);
@@ -162,6 +162,19 @@ export  const AppProvider = ({children})=>{
   useEffect(()=>{
      fetchService()
   },[])
+  const [userService,setuserService] = useState([])
+  const fetchepickedService = async()=>{
+       try {
+          const response = await axiosInstance.get(`${baseURL}/api/service/user`)
+          setuserService(response.data.service)
+          console.log(response.data.message)
+       } catch (error) {
+           console.log(error.message)
+       }
+  }
+  useEffect(()=>{
+    fetchepickedService()
+  },[user])
   const value = {
     products,
     user,
@@ -173,7 +186,9 @@ export  const AppProvider = ({children})=>{
     placeOrder,
     fetchOrders,
     myOrders,
-    services
+    services,
+    userService,
+    fetchepickedService,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

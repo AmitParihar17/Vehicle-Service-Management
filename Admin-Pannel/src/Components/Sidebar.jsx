@@ -24,6 +24,7 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     if (path.includes("/dashboard/manage-orders")) return ["5"];
     if (path.includes("/dashboard/settings")) return ["6"];
     if (path.includes("/dashboard/products")) return ["7"];
+    if (path.includes("/dashboard/manage-service")) return ["8"];
     return ["1"];
   };
 
@@ -67,6 +68,9 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
         </Menu.Item>
         <Menu.Item key="7" icon={<ShoppingOutlined />}>
           <NavLink to="/dashboard/products">See Products</NavLink>
+        </Menu.Item>
+        <Menu.Item key="8" icon={<ShoppingOutlined />}>
+          <NavLink to="/dashboard/manage-service">Manage Service</NavLink>
         </Menu.Item>
       </Menu>
     </Sider>

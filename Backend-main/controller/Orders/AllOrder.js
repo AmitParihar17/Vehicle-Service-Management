@@ -2,6 +2,7 @@ const Order = require("../../models/Order.js")
 const AllOrders = async (req,res)=>{
       try {
         const admin = req.user.id
+        console.log(admin)
         if(!admin){
             return res.status(400).json({
                 success:false,

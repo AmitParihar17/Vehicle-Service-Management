@@ -10,6 +10,7 @@ import Uploadproduct from "./Pages/Uploadproduct";
 import Products from "./Pages/Products";
 import ManageOrders from "./Pages/ManageOrders";
 import UploadService from "./Pages/UploadService";
+import ManageServiceBookings from "./Pages/ManageService";
  const App = () => {
    return (
      <div>
@@ -23,6 +24,7 @@ import UploadService from "./Pages/UploadService";
          <Route path="/dashboard/products" element={<Products/>}/>
          <Route path="/dashboard/manage-orders" element={<ManageOrders/>}/>
          <Route path="/dashboard/upload-service" element={<UploadService/>}/>
+         <Route path="/dashboard/manage-service" element={<ManageServiceBookings/>} />
          <Route path="/uploads" element={<UploadFile />} />
          <Route path="*" element={<NotFound />}></Route>
        </Routes>

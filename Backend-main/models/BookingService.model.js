@@ -1,6 +1,11 @@
-const {model,Schema}= require("mongoose")
+const { model, Schema, Types } = require("mongoose");
 const ServiceBookingSchema = new Schema(
   {
+    user: {
+      type: String,
+      required: true,
+      ref: "User",
+    },
     name: {
       type: String,
       required: true,
@@ -17,16 +22,21 @@ const ServiceBookingSchema = new Schema(
       type: String,
       required: true,
     },
-    selectedServices: {
-      type: Array,
-      ref: "Service",
-      required: true,
-    },
+    selectedServices: [
+      {
+        type:Types.ObjectId,
+        ref: "Service",
+      },
+    ],
     status: {
       type: String,
-      enum: ["pending","approved"],
+      enum: ["pending", "approved"],
       default: "pending",
       required: true,
+    },
+    totalPrice:{
+      type:Number,
+      required:true
     },
   },
   { timestamps: true }

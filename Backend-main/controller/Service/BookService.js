@@ -1,4 +1,5 @@
 const BookingServiceModel = require("../../models/BookingService.model.js")
+const serviceModel = require("../../models/service.model.js")
 const User = require("../../models/user.model.js")
 const BookService = async (req,res)=>{
     try {
@@ -12,12 +13,21 @@ const BookService = async (req,res)=>{
             message:"User not found"
         })
         }
+        const serviceDetails = await serviceModel.find({
+          _id: { $in: selectedServices },
+        });
+        const totalPrice = serviceDetails.reduce(
+          (sum, service) => sum + (service.servicePrice || 0),
+          0
+        );
         const booking = await BookingServiceModel.create({
+          user:userId,
           name,
           phone,
           date,
           time,
           selectedServices,
+          totalPrice,
         });
         return res.status(200).json({
             success:true,
