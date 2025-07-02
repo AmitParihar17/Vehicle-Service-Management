@@ -170,6 +170,8 @@ const Uploadproduct = () => {
                       "Air Fresheners",
                       "Roof Racks",
                       "Car Covers",
+                      "Interior",
+                      "Exterior",
                     ].map((item) => (
                       <Option key={item} value={item}>
                         {item}

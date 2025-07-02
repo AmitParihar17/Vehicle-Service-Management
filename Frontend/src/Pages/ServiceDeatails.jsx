@@ -111,9 +111,6 @@ const ServiceDetails = () => {
             </div>
 
             <div className="mt-6">
-              <p className="text-gray-500/70 line-through">
-                MRP: Rs{service.servicePrice}
-              </p>
               <p className="text-2xl font-medium">
                 MRP: Rs {service.servicePrice}
               </p>

@@ -26,6 +26,7 @@ const ProductCard = ({ product }) => {
           />
         </div>
         <div className="text-gray-500/60 text-sm">
+          <p className="text-gray-500 text-lg">{product.productName}</p>
           <p>{product.category}</p>
           <p className="text-gray-700 font-medium text-lg truncate w-full">
             {product.name}

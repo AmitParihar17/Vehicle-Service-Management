@@ -33,6 +33,9 @@ const Navbar = () => {
       <Menu.Item key="logout" onClick={handleLogout}>
         Logout
       </Menu.Item>
+      <Menu.Item key="logout" onClick={() =>navigate("/orders")}>
+        My Orders
+      </Menu.Item>
     </Menu>
   );
 

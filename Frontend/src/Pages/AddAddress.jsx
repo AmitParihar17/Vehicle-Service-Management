@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 import { baseURL } from '../../config'
-import axiosinstance from "../../Axiosinstance"
+import axiosinstance from "../../axiosInstance"
 import { toast ,ToastContainer } from 'react-toastify'
 import { UseAppContext } from '../Context/AppContext'
 
