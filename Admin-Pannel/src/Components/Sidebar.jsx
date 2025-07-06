@@ -48,9 +48,9 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       </div>
 
       <Menu theme="dark" mode="inline" selectedKeys={getSelectedKeys()}>
-        <Menu.Item key="1" icon={<DashboardOutlined />}>
+        {/* <Menu.Item key="1" icon={<DashboardOutlined />}>
           <NavLink to="/dashboard">Dashboard</NavLink>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="2" icon={<UserOutlined />}>
           <NavLink to="/dashboard/users">Users</NavLink>
         </Menu.Item>
@@ -63,9 +63,9 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
         <Menu.Item key="5" icon={<ShoppingOutlined />}>
           <NavLink to="/dashboard/manage-orders">Manage Orders</NavLink>
         </Menu.Item>
-        <Menu.Item key="6" icon={<SettingOutlined />}>
+        {/* <Menu.Item key="6" icon={<SettingOutlined />}>
           <NavLink to="/dashboard/settings">Settings</NavLink>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="7" icon={<ShoppingOutlined />}>
           <NavLink to="/dashboard/products">See Products</NavLink>
         </Menu.Item>

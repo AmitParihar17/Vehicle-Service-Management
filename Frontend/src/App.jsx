@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
  import { createBrowserRouter, RouterProvider } from "react-router-dom";
  import Navbar from "./Components/Navbar";
  import Footer from "./Pages/Footer";
@@ -16,6 +16,8 @@ import AddAddress from "./Pages/AddAddress";
 import Buy from "./Pages/Buy";
 import MyOrders from "./Pages/MyOrders";
 import ServiceDeatails from "./Pages/ServiceDeatails";
+import Testimonials from "./Pages/Testimonial";
+import GarageLocations from "./Pages/GarageLocation";
  
   const router = createBrowserRouter([
     {
@@ -35,6 +37,8 @@ import ServiceDeatails from "./Pages/ServiceDeatails";
         <>
           <Navbar />
           <AboutUs />
+          <Testimonials />
+          <GarageLocations />
           <Footer />
         </>
       ),

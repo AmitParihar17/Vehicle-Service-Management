@@ -48,7 +48,7 @@
          window.dispatchEvent(new Event("loginStatusChanged"));
 
          setTimeout(() => {
-           navigate("/dashboard");
+           navigate("/dashboard/users");
            setLoading(false);
          }, 2000);
        } else {
